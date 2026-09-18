@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>图书管理 · 个人网站</title>
+<link rel="stylesheet" href="/library/static/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="brand">个人网站</a>
+  <div class="links">
+    <a href="/">首页</a>
+    <a href="/control">机械臂</a>
+    <a href="/library/" class="on">图书管理</a>
+    <a href="/messages">留言板</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>图书管理系统</h1>
+  <p class="subtitle">
+    用 Python 手写数据结构实现 —— 哈希表索引用户、二叉搜索树检索图书、栈支撑撤销
+  </p>
+
+  <!-- ============ 工具栏 ============ -->
+  <div class="toolbar">
+    <label>当前身份</label>
+    <select id="current-user"></select>
+    <button id="btn-undo" title="撤销最近一次操作">↶ 撤销上一步</button>
+    <button id="btn-refresh">刷新</button>
+    <span style="flex:1"></span>
+    <button class="primary" id="btn-toggle-add">+ 添加图书</button>
+  </div>
+
+  <!-- ============ 添加图书表单（默认隐藏） ============ -->
+  <div class="panel" id="add-panel" style="display:none">
+    <h2>添加图书 / 杂志</h2>
+    <div class="form-row">
+      <select id="add-kind">
+        <option value="Book">图书</option>
+        <option value="Magazine">杂志</option>
+      </select>
+      <input type="text" id="add-id" placeholder="编号，如 B061">
+      <input type="text" id="add-title" placeholder="标题">
+      <input type="number" id="add-total" placeholder="总册数" min="1" value="1">
+      <input type="text" id="add-author" placeholder="作者（图书填）">
+      <input type="text" id="add-isbn" placeholder="ISBN（图书填）">
+    </div>
+    <div class="form-row">
+      <button class="primary" id="btn-add-submit">确认添加</button>
+      <button id="btn-add-cancel">取消</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- ============ 左：图书列表 ============ -->
+    <div>
+      <div class="panel">
+        <h2>馆藏 <span class="count" id="books-count"></span></h2>
+        <div id="books"></div>
+      </div>
+    </div>
+
+    <!-- ============ 右：用户 + 历史 ============ -->
+    <div>
+      <div class="panel">
+        <h2>用户 <span class="count" id="users-count"></span></h2>
+        <div id="users"></div>
+        <div class="form-row">
+          <input type="text" id="new-user-id" placeholder="用户ID">
+          <input type="text" id="new-user-name" placeholder="姓名">
+          <button id="btn-add-user">添加</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>操作历史 <span class="count" id="history-count"></span></h2>
+        <div id="history"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="/library/static/app.js"></script>
+</body>
+</html>
