@@ -4,6 +4,28 @@
 
 ---
 
+## 📌 关于本项目
+
+这是一个**课程小组作业**，由 8 位同学协作完成。
+
+| | |
+|---|---|
+| 原始仓库 | [GK-6660/JC1503-Library-System](https://github.com/GK-6660/JC1503-Library-System) |
+| 本仓库 | 上述仓库的 fork（保留完整的协作提交历史） |
+| 许可证 | [MIT](LICENSE)（Copyright © 2026 Spade_A） |
+
+### 本人负责的模块
+
+| 文件 | 内容 |
+|---|---|
+| [`src/structures/hash_table.py`](src/structures/hash_table.py) | **哈希表** —— 链地址法解决哈希冲突，用于按用户 ID 快速索引 |
+| [`src/structures/linked_list.py`](src/structures/linked_list.py) | **双向链表** —— 管理用户的借阅记录，实现了头/尾/中间三种删除情况 |
+| [`src/structures/stack.py`](src/structures/stack.py) | **栈** —— 支撑管理员的「撤销」功能 |
+
+以上模块的实现提交可在 git 历史中查证（提交作者：`03145612`）。
+
+---
+
 ## 🛠️ 1. 运行环境与启动方式
 
 - **环境要求**: Python 3.6 或更高版本。
