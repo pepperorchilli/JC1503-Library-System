@@ -6,8 +6,12 @@
 <title>{{ title }} · 在线阅读</title>
 <link rel="stylesheet" href="/library/static/style.css">
 <style>
-  /* 阅读区：限宽 + 大行距，长时间看不累 */
+  /* 阅读区：限宽 + 大行距，长时间看不累
+     ⚠️ position/z-index 不能省：星空画布是 fixed + z-index:0，
+        普通静态内容会被它盖住 —— 曾经因此出现「点阅读后只有星空、没有字」 */
   .reader-wrap {
+    position: relative;
+    z-index: 1;
     max-width: 760px;
     margin: 0 auto;
     padding: 0 20px 80px;
