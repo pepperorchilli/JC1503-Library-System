@@ -4,7 +4,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  background: #1a1a2e;
+  background: #000000;
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
@@ -20,15 +20,15 @@ body {
 }
 .brand { font-size: 17px; font-weight: 700; color: #fff; text-decoration: none; }
 .links a {
-  color: #8a8aa0; text-decoration: none; font-size: 14px;
+  color: #8a8a8a; text-decoration: none; font-size: 14px;
   margin-left: 18px; transition: color .15s;
 }
-.links a:hover, .links a.on { color: #00e5ff; }
+.links a:hover, .links a.on { color: #ffffff; }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
 
 h1 { font-size: 24px; margin-bottom: 6px; }
-.subtitle { font-size: 13px; color: #8a8aa0; margin-bottom: 18px; }
+.subtitle { font-size: 13px; color: #8a8a8a; margin-bottom: 18px; }
 
 /* ---------- 工具栏 ---------- */
 .toolbar {
@@ -36,33 +36,33 @@ h1 { font-size: 24px; margin-bottom: 6px; }
   background: rgba(255,255,255,.06); border-radius: 12px;
   padding: 12px 14px; margin-bottom: 16px;
 }
-.toolbar label { font-size: 13px; color: #8a8aa0; }
+.toolbar label { font-size: 13px; color: #8a8a8a; }
 select, input[type=text], input[type=number] {
   background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
   border-radius: 8px; padding: 8px 10px; color: #fff; font-size: 14px;
   font-family: inherit; outline: none;
 }
-select:focus, input:focus { border-color: rgba(0,229,255,.5); }
-input::placeholder { color: #55556a; }
+select:focus, input:focus { border-color: rgba(255, 255, 255,.5); }
+input::placeholder { color: #555555; }
 
 button {
   border: 1px solid rgba(255,255,255,.12); border-radius: 8px;
-  background: rgba(255,255,255,.05); color: #c8c8d8;
+  background: rgba(255,255,255,.05); color: #c8c8c8;
   padding: 8px 14px; font-size: 13px; cursor: pointer;
   font-family: inherit; transition: all .15s;
 }
 button:hover:not(:disabled) {
-  background: rgba(0,229,255,.15); color: #00e5ff;
-  border-color: rgba(0,229,255,.4);
+  background: rgba(255, 255, 255,.15); color: #ffffff;
+  border-color: rgba(255, 255, 255,.4);
 }
 button:disabled { opacity: .35; cursor: not-allowed; }
 button.primary {
-  background: rgba(0,229,255,.15); color: #00e5ff;
-  border-color: rgba(0,229,255,.4);
+  background: rgba(255, 255, 255,.15); color: #ffffff;
+  border-color: rgba(255, 255, 255,.4);
 }
 button.danger:hover:not(:disabled) {
-  background: rgba(255,107,107,.15); color: #ff6b6b;
-  border-color: rgba(255,107,107,.4);
+  background: rgba(187, 187, 187,.15); color: #bbbbbb;
+  border-color: rgba(187, 187, 187,.4);
 }
 button.sm { padding: 5px 10px; font-size: 12px; }
 
@@ -78,12 +78,12 @@ button.sm { padding: 5px 10px; font-size: 12px; }
   font-size: 14px; font-weight: 600; margin-bottom: 10px;
   display: flex; justify-content: space-between; align-items: center;
 }
-.panel h2 .count { font-size: 12px; color: #8a8aa0; font-weight: 400; }
+.panel h2 .count { font-size: 12px; color: #8a8a8a; font-weight: 400; }
 
 /* ---------- 图书表格 ---------- */
 .table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .table th {
-  text-align: left; padding: 8px 6px; color: #8a8aa0;
+  text-align: left; padding: 8px 6px; color: #8a8a8a;
   font-weight: 500; font-size: 12px;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
@@ -94,12 +94,12 @@ button.sm { padding: 5px 10px; font-size: 12px; }
 .title-cell { max-width: 260px; }
 .tag {
   display: inline-block; padding: 2px 7px; border-radius: 5px;
-  font-size: 11px; background: rgba(0,229,255,.12); color: #00e5ff;
+  font-size: 11px; background: rgba(255, 255, 255,.12); color: #ffffff;
 }
-.tag.mag { background: rgba(255,183,77,.15); color: #ffb74d; }
+.tag.mag { background: rgba(187, 187, 187,.15); color: #bbbbbb; }
 
 .stock { font-variant-numeric: tabular-nums; }
-.stock.out { color: #ff6b6b; }
+.stock.out { color: #bbbbbb; }
 
 /* ---------- 用户列表 ---------- */
 .user-item {
@@ -108,36 +108,36 @@ button.sm { padding: 5px 10px; font-size: 12px; }
   border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .user-item:last-child { border-bottom: none; }
-.user-item .name { color: #c8c8d8; }
-.user-item .id { color: #55556a; font-size: 12px; margin-left: 6px; }
-.user-item .books { color: #8a8aa0; font-size: 12px; }
+.user-item .name { color: #c8c8c8; }
+.user-item .id { color: #555555; font-size: 12px; margin-left: 6px; }
+.user-item .books { color: #8a8a8a; font-size: 12px; }
 
 /* ---------- 历史 ---------- */
 .history-item {
-  font-size: 12px; padding: 7px 0; color: #a8a8c0;
+  font-size: 12px; padding: 7px 0; color: #a8a8a8;
   border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .history-item:last-child { border-bottom: none; }
-.history-item .idx { color: #55556a; margin-right: 6px; }
+.history-item .idx { color: #555555; margin-right: 6px; }
 .history-item .type {
   display: inline-block; padding: 1px 6px; border-radius: 4px;
   background: rgba(255,255,255,.08); font-size: 11px; margin-right: 6px;
 }
 
-.empty { color: #55556a; font-size: 13px; padding: 16px 0; text-align: center; }
+.empty { color: #555555; font-size: 13px; padding: 16px 0; text-align: center; }
 
 /* ---------- 提示浮层 ---------- */
 #toast {
   position: fixed; left: 50%; bottom: 32px; transform: translateX(-50%) translateY(80px);
-  background: #2a2a45; border: 1px solid rgba(255,255,255,.15);
+  background: #111111; border: 1px solid rgba(255,255,255,.15);
   border-radius: 10px; padding: 12px 20px; font-size: 14px;
   box-shadow: 0 8px 24px rgba(0,0,0,.4);
   opacity: 0; transition: all .25s; pointer-events: none;
   max-width: 90vw; text-align: center;
 }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-#toast.ok { border-color: rgba(46,229,157,.5); }
-#toast.err { border-color: rgba(255,107,107,.5); color: #ffb3b3; }
+#toast.ok { border-color: rgba(255, 255, 255,.5); }
+#toast.err { border-color: rgba(187, 187, 187,.5); color: #dddddd; }
 
 /* ---------- 新增表单 ---------- */
 .form-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
@@ -159,15 +159,15 @@ button.sm { padding: 5px 10px; font-size: 12px; }
   padding-top: 4px;
 }
 
-.uname { font-size: 13px; color: #c8c8d8; }
+.uname { font-size: 13px; color: #c8c8c8; }
 
 .badge {
   font-size: 11px;
   padding: 3px 8px;
   border-radius: 999px;
-  background: rgba(0, 229, 255, .15);
-  color: #00e5ff;
-  border: 1px solid rgba(0, 229, 255, .3);
+  background: rgba(255, 255, 255, .15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, .3);
 }
 
 /* ---------- 我的借阅 ---------- */
@@ -181,11 +181,25 @@ button.sm { padding: 5px 10px; font-size: 12px; }
 }
 
 .loan-item:last-child { border-bottom: none; }
-.loan-title { color: #c8c8d8; }
+.loan-title { color: #c8c8c8; }
 
 /* 书表里的「已借」小标签 */
 .tag.mine {
-  background: rgba(46, 229, 157, .15);
-  color: #2ee59d;
+  background: rgba(255, 255, 255, .15);
+  color: #ffffff;
   margin-left: 6px;
+}
+
+/* ---------- 星空背景（全站统一）---------- */
+#sky {
+  position: fixed;
+  inset: 0;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nav, .container, .titlebar, #toast {
+  position: relative;
+  z-index: 1;
 }
