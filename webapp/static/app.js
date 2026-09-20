@@ -90,16 +90,25 @@ function renderBooks() {
     const tag = isMag ? '<span class="tag mag">杂志</span>' : '<span class="tag">图书</span>';
     const iBorrowed = loaned.has(b.title);
 
+    // 有全文的公版书：多一个「阅读」按钮
+    const readBtn = b.readable
+      ? `<a class="read-link" href="/library/read/${esc(b.resource_id)}">阅读</a>`
+      : '';
+
     // 「还」只对自己借过的书可用 —— 否则点了会报「你没有借阅这本书」
     const delBtn = isAdmin
       ? `<button class="sm danger" data-delbook="${esc(b.title)}">删</button>`
       : '';
 
+    // 可阅读的书标个「公版」，和教材区分开
+    const openTag = b.readable ? ' <span class="tag open">公版</span>' : '';
+
     return `<tr>
-      <td class="title-cell">${esc(b.title)}${iBorrowed ? ' <span class="tag mine">已借</span>' : ''}</td>
+      <td class="title-cell">${esc(b.title)}${openTag}${iBorrowed ? ' <span class="tag mine">已借</span>' : ''}</td>
       <td>${tag}</td>
       <td class="stock${out ? ' out' : ''}">${b.available_copies}/${b.total_copies}</td>
       <td>
+        ${readBtn}
         <button class="sm" data-borrow="${esc(b.title)}"${out || iBorrowed ? ' disabled' : ''}>借</button>
         <button class="sm" data-return="${esc(b.title)}"${iBorrowed ? '' : ' disabled'}>还</button>
         ${delBtn}

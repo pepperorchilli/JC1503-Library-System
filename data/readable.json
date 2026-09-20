@@ -1,0 +1,98 @@
+{
+  "G001": {
+    "file": "24264.txt",
+    "source": "Project Gutenberg #24264",
+    "source_url": "https://www.gutenberg.org/ebooks/24264",
+    "title": "紅樓夢"
+  },
+  "G002": {
+    "file": "23950.txt",
+    "source": "Project Gutenberg #23950",
+    "source_url": "https://www.gutenberg.org/ebooks/23950",
+    "title": "三國志演義"
+  },
+  "G003": {
+    "file": "23841.txt",
+    "source": "Project Gutenberg #23841",
+    "source_url": "https://www.gutenberg.org/ebooks/23841",
+    "title": "漢書"
+  },
+  "G004": {
+    "file": "24048.txt",
+    "source": "Project Gutenberg #24048",
+    "source_url": "https://www.gutenberg.org/ebooks/24048",
+    "title": "禮記"
+  },
+  "G005": {
+    "file": "23873.txt",
+    "source": "Project Gutenberg #23873",
+    "source_url": "https://www.gutenberg.org/ebooks/23873",
+    "title": "詩經"
+  },
+  "G006": {
+    "file": "25501.txt",
+    "source": "Project Gutenberg #25501",
+    "source_url": "https://www.gutenberg.org/ebooks/25501",
+    "title": "易經"
+  },
+  "G007": {
+    "file": "25288.txt",
+    "source": "Project Gutenberg #25288",
+    "source_url": "https://www.gutenberg.org/ebooks/25288",
+    "title": "山海經"
+  },
+  "G008": {
+    "file": "24230.txt",
+    "source": "Project Gutenberg #24230",
+    "source_url": "https://www.gutenberg.org/ebooks/24230",
+    "title": "今古奇觀"
+  },
+  "G009": {
+    "file": "24068.txt",
+    "source": "Project Gutenberg #24068",
+    "source_url": "https://www.gutenberg.org/ebooks/24068",
+    "title": "燕丹子"
+  },
+  "G010": {
+    "file": "12479.txt",
+    "source": "Project Gutenberg #12479",
+    "source_url": "https://www.gutenberg.org/ebooks/12479",
+    "title": "三字經"
+  },
+  "G011": {
+    "file": "1342.txt",
+    "source": "Project Gutenberg #1342",
+    "source_url": "https://www.gutenberg.org/ebooks/1342",
+    "title": "Pride and Prejudice"
+  },
+  "G012": {
+    "file": "11.txt",
+    "source": "Project Gutenberg #11",
+    "source_url": "https://www.gutenberg.org/ebooks/11",
+    "title": "Alice's Adventures in Wonderland"
+  },
+  "G013": {
+    "file": "84.txt",
+    "source": "Project Gutenberg #84",
+    "source_url": "https://www.gutenberg.org/ebooks/84",
+    "title": "Frankenstein"
+  },
+  "G014": {
+    "file": "1661.txt",
+    "source": "Project Gutenberg #1661",
+    "source_url": "https://www.gutenberg.org/ebooks/1661",
+    "title": "The Adventures of Sherlock Holmes"
+  },
+  "G015": {
+    "file": "1513.txt",
+    "source": "Project Gutenberg #1513",
+    "source_url": "https://www.gutenberg.org/ebooks/1513",
+    "title": "Romeo and Juliet"
+  },
+  "G016": {
+    "file": "98.txt",
+    "source": "Project Gutenberg #98",
+    "source_url": "https://www.gutenberg.org/ebooks/98",
+    "title": "A Tale of Two Cities"
+  }
+}

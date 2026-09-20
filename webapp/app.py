@@ -21,19 +21,46 @@
 """
 
 import io
+import json
 import os
 import sys
 
 # ---- 屏蔽 src/ 下遗留的 print（必须在导入业务模块之前执行）----
 sys.stdout = io.StringIO()
 
-from flask import Flask, g, jsonify, render_template, request   # noqa: E402
+from flask import (                                             # noqa: E402
+    Flask, Response, g, jsonify, render_template, request,
+)
 from werkzeug.exceptions import HTTPException                   # noqa: E402
 
 from auth import current_account, login_redirect                # noqa: E402
 from service import get_service, ServiceError                   # noqa: E402
 
 app = Flask(__name__, static_url_path="/library/static")
+
+# 公版书全文的存放目录（由 tools/fetch_gutenberg.py 下载）
+BOOKS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                         "..", "data", "books")
+
+# 「哪些书有全文」的映射表，由 tools/reset_catalog.py 生成
+#
+# 为什么不直接写在 library_data.json 里：图书系统的 Book.to_dict()
+# 只输出固定字段，自定义键会在保存→读取时被丢掉（实际踩过）。
+# 所以单独存一份，也就不需要改动组员的数据模型。
+READABLE_MAP_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                 "..", "data", "readable.json")
+
+
+def load_readable_map():
+    path = os.path.normpath(READABLE_MAP_FILE)
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError) as e:
+        print(f"读取 readable.json 失败：{e}", file=sys.stderr)
+        return {}
 
 
 # ================= 登录守卫 =================
@@ -100,9 +127,16 @@ def api_state():
     # 确保当前账号在图书系统里有档案（首次访问自动建立）
     svc.ensure_user(account["username"], account["nickname"])
 
+    # 给有全文的书补上 readable 标记，前端据此显示「阅读」按钮
+    readable_map = load_readable_map()
+    books = svc.list_books()
+    for b in books:
+        if b["resource_id"] in readable_map:
+            b["readable"] = True
+
     data = {
         "account": account,
-        "books": svc.list_books(),
+        "books": books,
         "myLoans": svc.my_loans(account["username"]),
     }
 
@@ -171,6 +205,88 @@ def api_undo():
 def api_history():
     require_admin()
     return jsonify(get_service().history())
+
+
+# ================= 在线阅读（公版书）=================
+#
+# 只有公版书有全文 —— 教材那些 PDF 来自盗版站，只登记书目不放内容。
+# 详见 tools/fetch_gutenberg.py 顶部的说明。
+
+def find_book(resource_id):
+    """按编号找书（书目在 BST 里是按书名索引的，所以遍历一遍）"""
+    for b in get_service().list_books():
+        if b.get("resource_id") == resource_id:
+            return b
+    return None
+
+
+@app.route("/library/read/<resource_id>")
+def read_book(resource_id):
+    book = find_book(resource_id)
+    if not book:
+        raise ServiceError(f"找不到编号为 {resource_id} 的书")
+
+    info = load_readable_map().get(resource_id)
+    if not info:
+        raise ServiceError(f"《{book['title']}》只有书目信息，没有可阅读的全文")
+
+    title = book["title"]
+    # 用标题里有没有汉字判断该用哪种排版（中文首行缩进，英文不缩进）
+    is_chinese = any('一' <= ch <= '鿿' for ch in title)
+
+    return render_template(
+        "reader.html",
+        title=title,
+        author=book.get("author", ""),
+        source=info.get("source"),
+        source_url=info.get("source_url"),
+        resource_id=resource_id,
+        is_chinese=is_chinese,
+    )
+
+
+@app.route("/library/api/book/<resource_id>/text")
+def api_book_text(resource_id):
+    info = load_readable_map().get(resource_id)
+    if not info or not info.get("file"):
+        return jsonify({"error": "这本书没有可阅读的全文"}), 404
+
+    path = os.path.normpath(os.path.join(BOOKS_DIR, info["file"]))
+
+    # 防目录穿越：拼出来的路径必须还在 books 目录里
+    if not path.startswith(os.path.normpath(BOOKS_DIR) + os.sep):
+        return jsonify({"error": "非法路径"}), 400
+    if not os.path.isfile(path):
+        return jsonify({"error": "正文文件缺失，请先跑 tools/fetch_gutenberg.py"}), 404
+
+    with open(path, encoding="utf-8", errors="replace") as f:
+        text = f.read()
+
+    # 剥掉 Project Gutenberg 的版权头尾，只留正文
+    text = strip_gutenberg_boilerplate(text)
+
+    return Response(text, mimetype="text/plain; charset=utf-8")
+
+
+def strip_gutenberg_boilerplate(text):
+    """
+    Gutenberg 的 txt 在正文前后各有一段英文版权声明，
+    用 *** START/END OF THE PROJECT GUTENBERG EBOOK *** 标记包着。
+    阅读器里没必要显示，切掉。
+    """
+    start_marker = "*** START OF THE PROJECT GUTENBERG EBOOK"
+    end_marker = "*** END OF THE PROJECT GUTENBERG EBOOK"
+
+    start = text.find(start_marker)
+    if start != -1:
+        nl = text.find("\n", start)
+        text = text[nl + 1:] if nl != -1 else text
+
+    end = text.find(end_marker)
+    if end != -1:
+        text = text[:end]
+
+    return text.strip()
 
 
 # ================= 启动 =================
