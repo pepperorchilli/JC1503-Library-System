@@ -19,64 +19,63 @@
 </nav>
 
 <div class="container">
-  <h1>图书管理系统</h1>
-  <p class="subtitle">
-    用 Python 手写数据结构实现 —— 哈希表索引用户、二叉搜索树检索图书、栈支撑撤销
-  </p>
-
-  <!-- ============ 工具栏 ============ -->
-  <div class="toolbar">
-    <label>当前身份</label>
-    <select id="current-user"></select>
-    <button id="btn-undo" title="撤销最近一次操作">↶ 撤销上一步</button>
-    <button id="btn-refresh">刷新</button>
-    <span style="flex:1"></span>
-    <button class="primary" id="btn-toggle-add">+ 添加图书</button>
-  </div>
-
-  <!-- ============ 添加图书表单（默认隐藏） ============ -->
-  <div class="panel" id="add-panel" style="display:none">
-    <h2>添加图书 / 杂志</h2>
-    <div class="form-row">
-      <select id="add-kind">
-        <option value="Book">图书</option>
-        <option value="Magazine">杂志</option>
-      </select>
-      <input type="text" id="add-id" placeholder="编号，如 B061">
-      <input type="text" id="add-title" placeholder="标题">
-      <input type="number" id="add-total" placeholder="总册数" min="1" value="1">
-      <input type="text" id="add-author" placeholder="作者（图书填）">
-      <input type="text" id="add-isbn" placeholder="ISBN（图书填）">
+  <div class="titlebar">
+    <div>
+      <h1>图书管理系统</h1>
+      <p class="subtitle">
+        用 Python 手写数据结构实现 —— 哈希表索引用户、二叉搜索树检索图书、栈支撑撤销
+      </p>
     </div>
-    <div class="form-row">
-      <button class="primary" id="btn-add-submit">确认添加</button>
-      <button id="btn-add-cancel">取消</button>
-    </div>
+    <div id="userbar"></div>
   </div>
 
   <div class="grid">
-    <!-- ============ 左：图书列表 ============ -->
+    <!-- ============ 左：馆藏 ============ -->
     <div>
       <div class="panel">
-        <h2>馆藏 <span class="count" id="books-count"></span></h2>
+        <h2>
+          馆藏 <span class="count" id="books-count"></span>
+          <button class="sm primary" id="btn-toggle-add" style="display:none">+ 添加图书</button>
+        </h2>
+
+        <!-- 添加图书表单（仅管理员可见，默认隐藏） -->
+        <div id="add-panel" style="display:none">
+          <div class="form-row">
+            <select id="add-kind">
+              <option value="Book">图书</option>
+              <option value="Magazine">杂志</option>
+            </select>
+            <input type="text" id="add-id" placeholder="编号，如 B061">
+            <input type="text" id="add-title" placeholder="标题">
+            <input type="number" id="add-total" placeholder="总册数" min="1" value="1">
+          </div>
+          <div class="form-row">
+            <input type="text" id="add-author" placeholder="作者（图书填）">
+            <input type="text" id="add-isbn" placeholder="ISBN（图书填）">
+          </div>
+          <div class="form-row">
+            <button class="primary" id="btn-add-submit">确认添加</button>
+            <button id="btn-add-cancel">取消</button>
+          </div>
+        </div>
+
         <div id="books"></div>
       </div>
     </div>
 
-    <!-- ============ 右：用户 + 历史 ============ -->
+    <!-- ============ 右：我的借阅 + 管理 ============ -->
     <div>
       <div class="panel">
-        <h2>用户 <span class="count" id="users-count"></span></h2>
-        <div id="users"></div>
-        <div class="form-row">
-          <input type="text" id="new-user-id" placeholder="用户ID">
-          <input type="text" id="new-user-name" placeholder="姓名">
-          <button id="btn-add-user">添加</button>
-        </div>
+        <h2>我的借阅 <span class="count" id="loans-count"></span></h2>
+        <div id="loans"></div>
       </div>
 
-      <div class="panel">
-        <h2>操作历史 <span class="count" id="history-count"></span></h2>
+      <!-- 以下仅管理员可见 -->
+      <div class="panel" id="admin-panel" style="display:none">
+        <h2>
+          操作历史 <span class="count" id="history-count"></span>
+          <button class="sm" id="btn-undo">↶ 撤销上一步</button>
+        </h2>
         <div id="history"></div>
       </div>
     </div>

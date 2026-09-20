@@ -57,6 +57,38 @@ class LibraryService:
     def _push_history(self, action_type, **fields):
         self.history_stack.push({"action_type": action_type, **fields})
 
+    # ================= 账号 → 图书馆用户 =================
+    #
+    # 全站一套账号：站点账号（用户名 + 昵称）直接当作图书系统的借阅人。
+    # 账号第一次访问图书馆时自动建档，不需要单独注册一次。
+
+    def ensure_user(self, user_id, name):
+        """
+        确保某账号在图书系统里有对应的用户记录，没有就创建。
+
+        返回该 User 对象。
+        """
+        try:
+            user = self.users.get(user_id)
+            # 昵称可能改过，同步一下
+            if user.name != name:
+                user.name = name
+                self._save()
+            return user
+        except ItemNotFoundError:
+            user = User(user_id, name)
+            self.users.insert(user_id, user)
+            self._save()
+            return user
+
+    def my_loans(self, user_id):
+        """当前账号借了哪些书"""
+        try:
+            user = self.users.get(user_id)
+        except ItemNotFoundError:
+            return []
+        return user.borrowed_items.to_list()
+
     # ================= 查询 =================
 
     def list_books(self):

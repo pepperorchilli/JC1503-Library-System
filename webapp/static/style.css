@@ -142,3 +142,50 @@ button.sm { padding: 5px 10px; font-size: 12px; }
 /* ---------- 新增表单 ---------- */
 .form-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
 .form-row input { flex: 1; min-width: 100px; }
+
+/* ---------- 登录状态栏 ---------- */
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#userbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.uname { font-size: 13px; color: #c8c8d8; }
+
+.badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(0, 229, 255, .15);
+  color: #00e5ff;
+  border: 1px solid rgba(0, 229, 255, .3);
+}
+
+/* ---------- 我的借阅 ---------- */
+.loan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, .05);
+}
+
+.loan-item:last-child { border-bottom: none; }
+.loan-title { color: #c8c8d8; }
+
+/* 书表里的「已借」小标签 */
+.tag.mine {
+  background: rgba(46, 229, 157, .15);
+  color: #2ee59d;
+  margin-left: 6px;
+}

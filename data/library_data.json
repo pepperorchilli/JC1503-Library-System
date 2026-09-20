@@ -5,7 +5,8 @@
             "name": "User_Name_1",
             "borrowed_items": [
                 "Book_Title_1",
-                "Book_Title_12"
+                "Book_Title_12",
+                "Book_Title_5"
             ],
             "is_active": true
         },
@@ -146,6 +147,12 @@
         {
             "user_id": "U026",
             "name": "User_Name_26",
+            "borrowed_items": [],
+            "is_active": true
+        },
+        {
+            "user_id": "qiudai",
+            "name": "\u963f\u5cb1",
             "borrowed_items": [],
             "is_active": true
         },
@@ -611,7 +618,7 @@
             "resource_id": "B005",
             "title": "Book_Title_5",
             "total_copies": 5,
-            "available_copies": 5,
+            "available_copies": 4,
             "waitlist": [],
             "type": "Book",
             "is_available_status": true,
