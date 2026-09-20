@@ -1,898 +1,156 @@
 {
-    "users": [
-        {
-            "user_id": "U001",
-            "name": "User_Name_1",
-            "borrowed_items": [
-                "Book_Title_1",
-                "Book_Title_12",
-                "Book_Title_5"
-            ],
-            "is_active": true
-        },
-        {
-            "user_id": "U010",
-            "name": "User_Name_10",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U002",
-            "name": "User_Name_2",
-            "borrowed_items": [
-                "Magazine_Title_1"
-            ],
-            "is_active": true
-        },
-        {
-            "user_id": "U011",
-            "name": "User_Name_11",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U020",
-            "name": "User_Name_20",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U003",
-            "name": "User_Name_3",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U012",
-            "name": "User_Name_12",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U021",
-            "name": "User_Name_21",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U030",
-            "name": "User_Name_30",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U004",
-            "name": "User_Name_4",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U013",
-            "name": "User_Name_13",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U022",
-            "name": "User_Name_22",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U005",
-            "name": "User_Name_5",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U014",
-            "name": "User_Name_14",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U023",
-            "name": "User_Name_23",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U006",
-            "name": "User_Name_6",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U015",
-            "name": "User_Name_15",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U024",
-            "name": "User_Name_24",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U007",
-            "name": "User_Name_7",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U016",
-            "name": "User_Name_16",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U025",
-            "name": "User_Name_25",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U008",
-            "name": "User_Name_8",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U017",
-            "name": "User_Name_17",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U026",
-            "name": "User_Name_26",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "qiudai",
-            "name": "\u963f\u5cb1",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U009",
-            "name": "User_Name_9",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U018",
-            "name": "User_Name_18",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U027",
-            "name": "User_Name_27",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U019",
-            "name": "User_Name_19",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U028",
-            "name": "User_Name_28",
-            "borrowed_items": [],
-            "is_active": true
-        },
-        {
-            "user_id": "U029",
-            "name": "User_Name_29",
-            "borrowed_items": [],
-            "is_active": true
-        }
-    ],
-    "books": [
-        {
-            "resource_id": "B001",
-            "title": "Book_Title_1",
-            "total_copies": 5,
-            "available_copies": 4,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_1",
-            "isbn": "ISBN-1",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B010",
-            "title": "Book_Title_10",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_10",
-            "isbn": "ISBN-10",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B011",
-            "title": "Book_Title_11",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_11",
-            "isbn": "ISBN-11",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B012",
-            "title": "Book_Title_12",
-            "total_copies": 5,
-            "available_copies": 4,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_12",
-            "isbn": "ISBN-12",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B013",
-            "title": "Book_Title_13",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_13",
-            "isbn": "ISBN-13",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B014",
-            "title": "Book_Title_14",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_14",
-            "isbn": "ISBN-14",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B015",
-            "title": "Book_Title_15",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_15",
-            "isbn": "ISBN-15",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B016",
-            "title": "Book_Title_16",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_16",
-            "isbn": "ISBN-16",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B017",
-            "title": "Book_Title_17",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_17",
-            "isbn": "ISBN-17",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B018",
-            "title": "Book_Title_18",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_18",
-            "isbn": "ISBN-18",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B019",
-            "title": "Book_Title_19",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_19",
-            "isbn": "ISBN-19",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B002",
-            "title": "Book_Title_2",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_2",
-            "isbn": "ISBN-2",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B020",
-            "title": "Book_Title_20",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_20",
-            "isbn": "ISBN-20",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B021",
-            "title": "Book_Title_21",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_21",
-            "isbn": "ISBN-21",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B022",
-            "title": "Book_Title_22",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_22",
-            "isbn": "ISBN-22",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B023",
-            "title": "Book_Title_23",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_23",
-            "isbn": "ISBN-23",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B024",
-            "title": "Book_Title_24",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_24",
-            "isbn": "ISBN-24",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B025",
-            "title": "Book_Title_25",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_25",
-            "isbn": "ISBN-25",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B026",
-            "title": "Book_Title_26",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_26",
-            "isbn": "ISBN-26",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B027",
-            "title": "Book_Title_27",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_27",
-            "isbn": "ISBN-27",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B028",
-            "title": "Book_Title_28",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_28",
-            "isbn": "ISBN-28",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B029",
-            "title": "Book_Title_29",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_29",
-            "isbn": "ISBN-29",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B003",
-            "title": "Book_Title_3",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_3",
-            "isbn": "ISBN-3",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B030",
-            "title": "Book_Title_30",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_30",
-            "isbn": "ISBN-30",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B031",
-            "title": "Book_Title_31",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_31",
-            "isbn": "ISBN-31",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B032",
-            "title": "Book_Title_32",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_32",
-            "isbn": "ISBN-32",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B033",
-            "title": "Book_Title_33",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_33",
-            "isbn": "ISBN-33",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B034",
-            "title": "Book_Title_34",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_34",
-            "isbn": "ISBN-34",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B035",
-            "title": "Book_Title_35",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_35",
-            "isbn": "ISBN-35",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B036",
-            "title": "Book_Title_36",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_36",
-            "isbn": "ISBN-36",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B037",
-            "title": "Book_Title_37",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_37",
-            "isbn": "ISBN-37",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B038",
-            "title": "Book_Title_38",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_38",
-            "isbn": "ISBN-38",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B039",
-            "title": "Book_Title_39",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_39",
-            "isbn": "ISBN-39",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B004",
-            "title": "Book_Title_4",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_4",
-            "isbn": "ISBN-4",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B040",
-            "title": "Book_Title_40",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_40",
-            "isbn": "ISBN-40",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B005",
-            "title": "Book_Title_5",
-            "total_copies": 5,
-            "available_copies": 4,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_5",
-            "isbn": "ISBN-5",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B006",
-            "title": "Book_Title_6",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_6",
-            "isbn": "ISBN-6",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B007",
-            "title": "Book_Title_7",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_7",
-            "isbn": "ISBN-7",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B008",
-            "title": "Book_Title_8",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_8",
-            "isbn": "ISBN-8",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "B009",
-            "title": "Book_Title_9",
-            "total_copies": 5,
-            "available_copies": 5,
-            "waitlist": [],
-            "type": "Book",
-            "is_available_status": true,
-            "author": "Author_9",
-            "isbn": "ISBN-9",
-            "is_fiction_book": true
-        },
-        {
-            "resource_id": "M001",
-            "title": "Magazine_Title_1",
-            "total_copies": 3,
-            "available_copies": 2,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_1",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M010",
-            "title": "Magazine_Title_10",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_10",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M011",
-            "title": "Magazine_Title_11",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_11",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M012",
-            "title": "Magazine_Title_12",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_12",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M013",
-            "title": "Magazine_Title_13",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_13",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M014",
-            "title": "Magazine_Title_14",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_14",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M015",
-            "title": "Magazine_Title_15",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_15",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M016",
-            "title": "Magazine_Title_16",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_16",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M017",
-            "title": "Magazine_Title_17",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_17",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M018",
-            "title": "Magazine_Title_18",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_18",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M019",
-            "title": "Magazine_Title_19",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_19",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M002",
-            "title": "Magazine_Title_2",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_2",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M020",
-            "title": "Magazine_Title_20",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_20",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M003",
-            "title": "Magazine_Title_3",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_3",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M004",
-            "title": "Magazine_Title_4",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_4",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M005",
-            "title": "Magazine_Title_5",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_5",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M006",
-            "title": "Magazine_Title_6",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_6",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M007",
-            "title": "Magazine_Title_7",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_7",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M008",
-            "title": "Magazine_Title_8",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_8",
-            "is_monthly_mag": true
-        },
-        {
-            "resource_id": "M009",
-            "title": "Magazine_Title_9",
-            "total_copies": 3,
-            "available_copies": 3,
-            "waitlist": [],
-            "type": "Magazine",
-            "is_available_status": true,
-            "issue_number": "Issue_9",
-            "is_monthly_mag": true
-        }
-    ]
+  "users": [
+    {
+      "user_id": "qiudai",
+      "name": "阿岱",
+      "borrowed_items": [],
+      "is_active": true
+    }
+  ],
+  "books": [
+    {
+      "resource_id": "B001",
+      "title": "离散数学及其应用（第8版）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "Kenneth H. Rosen",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B002",
+      "title": "Discrete Mathematics and Its Applications (8th Edition)",
+      "total_copies": 2,
+      "available_copies": 2,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "Kenneth H. Rosen",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B003",
+      "title": "微积分（上册）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "James Stewart",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B004",
+      "title": "微积分（下册）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "James Stewart",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B005",
+      "title": "Calculus (7th Edition)",
+      "total_copies": 2,
+      "available_copies": 2,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "James Stewart",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B006",
+      "title": "线性代数及其应用（第5版）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "David C. Lay",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B007",
+      "title": "线性代数及其应用·答案手册",
+      "total_copies": 2,
+      "available_copies": 2,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "David C. Lay",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B008",
+      "title": "计算机组成与设计：硬件软件接口（RISC-V版·第5版）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "David A. Patterson / John L. Hennessy",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B009",
+      "title": "计算机科学概论（第13版）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "J. Glenn Brookshear",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B010",
+      "title": "计算机科学概论（第13版）·习题与答案",
+      "total_copies": 2,
+      "available_copies": 2,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "J. Glenn Brookshear",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B011",
+      "title": "Head First Java（第二版）",
+      "total_copies": 3,
+      "available_copies": 3,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "Kathy Sierra / Bert Bates",
+      "isbn": "-",
+      "is_fiction_book": false
+    },
+    {
+      "resource_id": "B012",
+      "title": "毛泽东思想和中国特色社会主义理论体系概论（2023年版）",
+      "total_copies": 5,
+      "available_copies": 5,
+      "waitlist": [],
+      "type": "Book",
+      "is_available_status": true,
+      "author": "本书编写组",
+      "isbn": "-",
+      "is_fiction_book": false
+    }
+  ]
 }
